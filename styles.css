@@ -1,9 +1,24 @@
+/* Juan Esteban Alayon - Juan Carlos Gallego */
+
 #map { height: 100% }
 
-.card {
-    width: 18rem;
-    min-width: 18rem; 
-    max-width: 18rem; 
-    
+#card {
+
+    width: 18rem; 
+    max-width: 18rem;
     max-height: 39rem;
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#card_registro_secundario {
+
+    max-height: 40rem;
+    width: 35rem;
+
+}
+
+td {
+    width: 5%;
 }

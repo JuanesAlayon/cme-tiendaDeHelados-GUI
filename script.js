@@ -1,4 +1,5 @@
 import { record } from "./registro.js";
+
 /*
   Colegio Ténico Maria Elvinia
   Grado 10º
@@ -117,7 +118,9 @@ const calcular = () => {
   factura += `Bolitas de helado\n`;
   var valorTotalSabor = 0;
   var i2 = 0;
+
   while (i2 < cantidadSabores) {
+
     var valorSabor = costos[1][pedido[0][i2] - 1];
     var numeroDeBolitas = pedido[1][i2];
     var totalSabor = valorSabor * numeroDeBolitas;
@@ -126,6 +129,7 @@ const calcular = () => {
     factura += `${nombreSabor} x ${numeroDeBolitas} = $${totalSabor} COP\n`;
     valorTotalSabor += totalSabor;
     i2++;
+
   }
 
   /**
@@ -134,7 +138,9 @@ const calcular = () => {
   factura += `\nAderesos\n`;
   var valorTotalAderesos = 0;
   var i3 = 0;
+
   while (i3 < cantidadAderesos) {
+
     var valorAdereso = costos[3][pedido[2][i3] - 1];
     var unidadesAdereso = pedido[3][i3];
     var totalAdereso = valorAdereso * unidadesAdereso;
@@ -150,9 +156,11 @@ const calcular = () => {
   nueva línea el valor total del helado
 */
   factura += `\nTOTAL = ${valorTotalAderesos + valorTotalSabor} COP`;
+
   record(valorTotalAderesos + valorTotalSabor, factura);
   document.getElementById("contenidoFactura").innerText = factura;
   factura = ``;
+  
 };
 
 document.querySelector("#button").addEventListener("click",calcular)
